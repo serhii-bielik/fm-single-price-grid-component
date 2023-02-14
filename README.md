@@ -4,7 +4,7 @@ This is a solution to the [Single price grid component challenge on Frontend Men
 
 ### Links
 
-- Live Site URL: [Live Preview](https://serhii-bielik.github.io//)
+- Live Site URL: [Live Preview](https://serhii-bielik.github.io/fm-single-price-grid-component/)
 - Frontend Mentor - [@serhii-bielik](https://www.frontendmentor.io/profile/serhii-bielik)
 
 ### Screenshot

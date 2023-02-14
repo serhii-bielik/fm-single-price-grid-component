@@ -9,7 +9,9 @@
 }
 
 :root {
+  --white: hsl(0, 100%, 100%);
   --cyan: hsl(179, 62%, 43%);
+  --light-cyan: #4abebd; /* ??? hsl(179, 61%, 75%); */
   --bright-yellow: hsl(71, 73%, 54%);
   --light-gray: hsl(204, 43%, 93%);
   --grayish-blue: hsl(218, 22%, 67%);
@@ -17,5 +19,159 @@
 
 body {
   font-family: 'Karla', sans-serif;
+  font-weight: 400;
   font-size: 16px;
+  color: var(--grayish-blue);
+  background-color: var(--light-gray);
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.price-component {
+  min-width: 250px;
+  max-width: 85%;
+  box-shadow: 0px 10px 40px 5px rgba(133, 147, 171, 0.4);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+/* Join Section */
+
+.join-section {
+  padding: 1.5rem;
+  background-color: var(--white);
+}
+
+.join-section__title {
+  font-size: 1.3rem;
+  color: var(--cyan);
+  margin: 0.5rem 0 1.5rem 0;
+}
+
+.join-section__subtitle {
+  font-size: 1.1rem;
+  color: var(--bright-yellow);
+  margin-bottom: 1.5rem;
+}
+
+.join-section__description {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* Price section */
+
+.price-section {
+  padding: 1.5rem;
+  color: var(--white);
+  background-color: var(--cyan);
+}
+
+.price-section__title {
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+}
+
+.price-section__price {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.price-section__price-value {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.price-section__price-period {
+  margin-left: 1rem;
+  color: var(--light-gray);
+}
+
+.price-section__description {
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+.price-section__signup {
+  display: inline-block;
+  width: 100%;
+  padding: 0.8rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--white);
+  background-color: var(--bright-yellow);
+  border-radius: 0.3rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  transition: all 150ms ease-in-out;
+}
+
+.price-section__signup:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+/* Question section */
+
+.question-section {
+  padding: 1.5rem;
+  color: var(--white);
+  background-color: var(--light-cyan);
+}
+
+.question-section__title {
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+}
+
+.question-section__list {
+  list-style: none;
+  font-size: 0.85rem;
+  line-height: 1.2rem;
+  color: var(--light-gray);
+}
+
+/* Desktop */
+
+@media (min-width: 600px) {
+  .price-component {
+    max-width: 635px;
+  }
+
+  .bottom-section {
+    display: flex;
+  }
+
+  .join-section {
+    padding: 2.5rem;
+  }
+
+  .join-section__title {
+    font-size: 1.5rem;
+  }
+
+  .join-section__subtitle {
+    margin-bottom: 1rem;
+  }
+
+  .join-section__description {
+    font-size: 1rem;
+  }
+
+  .price-section {
+    padding: 2.5rem;
+    flex-basis: 50%;
+  }
+
+  .question-section {
+    padding: 2.5rem;
+    flex-basis: 50%;
+  }
 }
